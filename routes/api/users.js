@@ -29,7 +29,7 @@ router.post('/',[
            return res.status(400).json({errors:[{msg:'User already exists'}]})
        }
                //get users gravatar
-
+      
      const avatar=gravatar.url(email,{
          s:'200', //size
          r:'pg', //r means rating ..pg means pg rated images for kids only

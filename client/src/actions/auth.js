@@ -91,4 +91,7 @@ export const login = (email, password) => async dispatch => {
 export const logout = () => dispatch => {
     dispatch({ type: LOG_OUT })
     dispatch({ type: CLEAR_PROFILE })
+    if(localStorage.token){
+      setAuthToken(null)  //to make token header as default while sending request
+   }
   };

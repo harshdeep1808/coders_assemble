@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
+  --primary-color:#ffa500;
+  --dark-color:#808080;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -488,8 +488,8 @@ button {
   margin-bottom: 0.5rem;
 }
 
-/* Mobile Styles */
-@media (max-width: 700px) {
+/* Mobile Styles when the resolution of window is 700px or less*/
+@media (max-width: 700px) {  
   .container {
     margin-top: 8rem;
   }
