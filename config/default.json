@@ -1,5 +1,5 @@
 {
-    "mongoURI":"mongodb+srv://memories_project:tagrrdpdycwssj2001@cluster0.nwn2g.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongoURI":"mongodb+srv://memories_project:Abcd%401234@cluster0.nwn2g.mongodb.net/<dbname>?retryWrites=true&w=majority",
     "jwtSecret":"mySecret",
     "githubClientId":"6267ee703f6a8459b9aa",
     "githubSecret":"f919bb432bff0111c5b4666b5bfe6e422ac3c403"
