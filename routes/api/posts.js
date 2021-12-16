@@ -5,6 +5,9 @@ const auth=require('../../middleware/auth')
 const User=require('../../models/Users.js')
 const Profile=require('../../models/Profile.js')
 const Post=require('../../models/Post.js')
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 const router=express.Router()
 

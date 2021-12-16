@@ -9,9 +9,7 @@ export const loadUser=()=>async dispatch=>{
             setAuthToken(localStorage.token)  //to make token header as default while sending request
          }
          try{
-             console.log('yes')
                  const res=await axios.get('api/auth')
-                 console.log('lmao')
                  dispatch({
                      type:USER_LOADED,
                      payload:res.data

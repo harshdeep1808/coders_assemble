@@ -1,8 +1,10 @@
 const express=require('express')
 const jwt=require('jsonwebtoken')
-const config=require('config')
 const bcrypt=require('bcryptjs')
 const {check,validationResult}=require('express-validator')
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 const auth=require('../../middleware/auth')
 const User=require('../../models/Users')
@@ -52,7 +54,7 @@ router.post('/',[
     }
     jwt.sign(
        payload,
-       config.get('jwtSecret'),
+       process.env.jwtSecret,
        {expiresIn:36000},
        (err,token)=>{
             if(err)

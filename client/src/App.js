@@ -32,7 +32,6 @@ if(localStorage.token){
 const App=()=>{
 
 useEffect(()=>{
-  console.log('nice')
         store.dispatch(loadUser())  //will only run once, will load user if logged in  
 },[])
 

@@ -9,7 +9,6 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
   }, [getProfiles]);
-         console.log(profiles)
   return (
     <Fragment>
       {loading ? (
@@ -23,9 +22,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </p>
           <div className='profiles'>
             {profiles.length > 0 ? (
-              profiles.map(profile => (
+              profiles.map(profile => { console.log(profile); return (
                 <ProfileItem key={profile._id} profile={profile} />
-              ))
+              )})
             ) : (
               <h4>No profiles found...</h4>
             )}

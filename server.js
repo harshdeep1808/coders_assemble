@@ -2,6 +2,9 @@ const express=require('express')
 const connectDB=require('./config/db.js')
 const bodyparser=require('body-parser')
 const path=require('path')
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 const usersRouter=require('./routes/api/users')
 const profileRouter=require('./routes/api/profile.js')

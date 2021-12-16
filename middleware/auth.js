@@ -1,5 +1,7 @@
 const jwt=require('jsonwebtoken')
-const config=require('config')
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 module.exports=function(req,res,next){
      const token=req.header('x-auth-token')
@@ -7,7 +9,7 @@ module.exports=function(req,res,next){
         return res.status(401).json({msg:'No token,auth denied'})
     }
     try{
-        const decoded=jwt.verify(token,config.get('jwtSecret'))
+        const decoded=jwt.verify(token,process.env.jwtSecret)
     
         req.user=decoded.user
         next()
